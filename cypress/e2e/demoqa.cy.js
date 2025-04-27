@@ -17,10 +17,19 @@ describe('demoqa scenario', () => {
     PracticeForm.setSubject.type('Economics');
 
     //Set Hobbies to Music.
-    PracticeForm.setHobbie.eq(2).click();
+    cy.get('body').click();
+    PracticeForm.disappearDropdown.should('not.exist');
+    PracticeForm.setHobbie.last().click();
     
     //Upload an image of your choice.
     PracticeForm.setImage.selectFile('cypress/fixtures/files/stock_image.jpeg');
     
+    //Set State to NCR.
+    PracticeForm.clickState.eq(1).click();
+    PracticeForm.setStateCity.contains('NCR').click();
+
+    //Set City to Delhi.
+    PracticeForm.clickCity.last().click();
+    PracticeForm.setStateCity.contains('Delhi').click();
   })
 })

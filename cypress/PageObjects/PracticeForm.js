@@ -25,11 +25,27 @@ export class PracticeForm extends BasePage {
         return cy.get('input#subjectsInput');
     }
 
+    static get disappearDropdown() {
+        return cy.get('.subjects-auto-complete__option');
+    }
+
     static get setHobbie() {
-        return cy.get('div.custom-control');
+        return cy.get('div.custom-checkbox');
     }
 
     static get setImage() {
         return cy.get('input[type=file]');
+    }
+
+    static get clickState() {
+        return cy.get('div.css-1wa3eu0-placeholder');
+    }
+
+    static get setStateCity() {
+        return cy.get('div.css-26l3qy-menu');
+    }
+
+    static get clickCity() {
+        return cy.get('div.css-2b097c-container');
     }
 }
