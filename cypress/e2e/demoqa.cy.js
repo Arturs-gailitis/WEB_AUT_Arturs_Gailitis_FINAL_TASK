@@ -37,8 +37,22 @@ describe('demoqa scenario', () => {
     PracticeForm.lastName.type('Doe');
     PracticeForm.setEmail.type('JohnDoe221@test.com');
     PracticeForm.setGender.first().click();
-    PracticeForm.setMobileNumber.type('23 404 382');
-    PracticeForm.setAddress.type('Latvia Riga Ernestīnes iela 33');
+    PracticeForm.setMobileNumber.type('1372197301');
+    PracticeForm.setAddress.type('Latvia Riga Ernestines iela 33');
 
+    //Click Submit.
+    PracticeForm.clickSubmit.click();
+
+    //Validate that each Labeled row contains the correct information.
+    PracticeForm.validate.contains('John Doe').should('exist');
+    PracticeForm.validate.contains('JohnDoe221@test.com').should('exist');
+    PracticeForm.validate.contains('Male').should('exist');
+    PracticeForm.validate.contains('1372197301').should('exist');
+    PracticeForm.validate.contains('28 February,1930').should('exist');
+    PracticeForm.validate.contains('Economics').should('exist');
+    PracticeForm.validate.contains('Music').should('exist');
+    PracticeForm.validate.contains('stock_image.jpeg').should('exist');
+    PracticeForm.validate.contains('Latvia Riga Ernestines iela 33').should('exist');
+    PracticeForm.validate.contains('NCR Delhi').should('exist');
   })
 })

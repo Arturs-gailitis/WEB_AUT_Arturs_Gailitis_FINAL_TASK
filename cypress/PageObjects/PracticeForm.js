@@ -72,4 +72,12 @@ export class PracticeForm extends BasePage {
     static get setAddress() {
         return cy.get('textarea#currentAddress');
     }
+
+    static get clickSubmit() {
+        return cy.get('button#submit');
+    }
+
+    static get validate() {
+        return cy.get('td');
+    }
 }
