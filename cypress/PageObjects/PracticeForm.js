@@ -28,4 +28,8 @@ export class PracticeForm extends BasePage {
     static get setHobbie() {
         return cy.get('div.custom-control');
     }
+
+    static get setImage() {
+        return cy.get('input[type=file]');
+    }
 }

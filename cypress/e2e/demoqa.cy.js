@@ -18,7 +18,9 @@ describe('demoqa scenario', () => {
 
     //Set Hobbies to Music.
     PracticeForm.setHobbie.eq(2).click();
-    //Input all the necessary information in the text fields, buttons, etc, where it is not stated otherwise.
+    
+    //Upload an image of your choice.
+    PracticeForm.setImage.selectFile('cypress/fixtures/files/stock_image.jpeg');
     
   })
 })
