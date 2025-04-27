@@ -14,7 +14,7 @@ describe('demoqa scenario', () => {
     PracticeForm.selectDay.last().click();
 
     //Set Subjects to Economics.
-    PracticeForm.setSubject.type('Economics');
+    PracticeForm.setSubject.type('Economics{enter}');
 
     //Set Hobbies to Music.
     cy.get('body').click();
@@ -31,5 +31,14 @@ describe('demoqa scenario', () => {
     //Set City to Delhi.
     PracticeForm.clickCity.last().click();
     PracticeForm.setStateCity.contains('Delhi').click();
+
+    //Input all the necessary information in the text fields, buttons, etc, where it is not stated otherwise.
+    PracticeForm.firstName.type('John');
+    PracticeForm.lastName.type('Doe');
+    PracticeForm.setEmail.type('JohnDoe221@test.com');
+    PracticeForm.setGender.first().click();
+    PracticeForm.setMobileNumber.type('23 404 382');
+    PracticeForm.setAddress.type('Latvia Riga Ernestīnes iela 33');
+
   })
 })

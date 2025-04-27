@@ -38,7 +38,7 @@ export class PracticeForm extends BasePage {
     }
 
     static get clickState() {
-        return cy.get('div.css-1wa3eu0-placeholder');
+        return cy.get('div.css-2b097c-container');
     }
 
     static get setStateCity() {
@@ -47,5 +47,29 @@ export class PracticeForm extends BasePage {
 
     static get clickCity() {
         return cy.get('div.css-2b097c-container');
+    }
+
+    static get firstName() {
+        return cy.get('#firstName');
+    }
+
+    static get lastName() {
+        return cy.get('#lastName');
+    }
+
+    static get setEmail() {
+        return cy.get('#userEmail');
+    }
+
+    static get setGender() {
+        return cy.get('.custom-control-inline');
+    }
+
+    static get setMobileNumber() {
+        return cy.get('#userNumber');
+    }
+
+    static get setAddress() {
+        return cy.get('textarea#currentAddress');
     }
 }
